@@ -1,0 +1,304 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// “ú–{Œê resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIG DIALOG DISCARDABLE  0, 0, 99, 100
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "Setup"
+FONT 9, "Tahoma"
+BEGIN
+END
+
+IDD_COLOR DIALOG DISCARDABLE  0, 0, 96, 85
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "Tahoma"
+BEGIN
+    CONTROL         "Rnd",IDC_CHECKRND,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,4,26,26,10
+    EDITTEXT        IDC_EDITRGB,63,5,32,12,WS_GROUP
+    CONTROL         "Slider2",IDC_SLIDERR,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_GROUP | WS_TABSTOP,65,20,11,
+                    65
+    CONTROL         "Slider3",IDC_SLIDERG,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_GROUP | WS_TABSTOP,75,20,11,
+                    65
+    CONTROL         "Slider4",IDC_SLIDERB,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_GROUP | WS_TABSTOP,85,20,11,
+                    65
+    RTEXT           "Set",IDC_STATIC,0,75,15,10
+    LTEXT           "Fore",IDC_STATIC,45,5,15,10
+    LTEXT           " R",IDC_STATIC,45,15,15,10
+    LTEXT           " G",IDC_STATIC,45,25,15,10
+    LTEXT           " Y",IDC_STATIC,45,35,15,10
+    LTEXT           " B",IDC_STATIC,45,45,15,10
+    LTEXT           " M",IDC_STATIC,45,55,15,10
+    LTEXT           " C",IDC_STATIC,45,65,15,10
+    LTEXT           " W",IDC_STATIC,45,75,15,10
+    LTEXT           "Line",IDC_STATIC,15,55,15,10
+    LTEXT           "Back",IDC_STATIC,15,5,15,10
+    LTEXT           "to",IDC_STATICB2,15,15,15,10,NOT WS_VISIBLE
+END
+
+IDD_MISC DIALOG DISCARDABLE  0, 0, 96, 85
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "Tahoma"
+BEGIN
+    CONTROL         "",IDC_PIC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,2,10,
+                    12
+    PUSHBUTTON      "Pict...",IDC_BITMAP,10,2,30,12
+    LTEXT           "Gamma=",IDC_STATIC,55,0,35,8
+    RTEXT           "",IDC_GAMMA,45,7,45,8
+    RTEXT           "Buffer",IDC_STATIC,0,37,20,10
+    EDITTEXT        IDC_SCROLL,20,35,20,13
+    LTEXT           "lines",IDC_STATIC,40,37,15,10
+    COMBOBOX        IDC_SJIS,65,35,30,35,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Send",IDC_STATIC,0,52,19,10
+    COMBOBOX        IDC_ENTER,20,50,30,12,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Rcv",IDC_STATIC,50,52,15,10
+    COMBOBOX        IDC_NEWLINE,65,50,30,12,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "AutoClose",IDC_STAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,0,65,45,10
+    CONTROL         "Bold",IDC_BOLD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,45,
+                    65,25,10
+    CONTROL         "Yen",IDC_YEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,
+                    65,25,10
+    CONTROL         "BS/Del",IDC_BSDEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    0,75,35,10
+    CONTROL         "Echo",IDC_ECHO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,
+                    75,30,10
+END
+
+IDD_HOST DIALOG DISCARDABLE  0, 0, 96, 85
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_HOST,0,2,95,12,ES_AUTOHSCROLL
+    RTEXT           "Option",IDC_STATIC,20,17,25,10
+    COMBOBOX        IDC_OPTION,45,15,50,12,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Port",IDC_STATIC,0,31,15,10
+    COMBOBOX        IDC_PORT,15,29,80,65,CBS_DROPDOWNLIST | CBS_SORT | 
+                    CBS_NOINTEGRALHEIGHT | WS_TABSTOP
+    CONTROL         "IR",IDC_IRMODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,
+                    42,20,10
+    RTEXT           "Bps",IDC_STATIC,0,44,15,10
+    COMBOBOX        IDC_BAUD,15,42,40,50,CBS_DROPDOWNLIST | 
+                    CBS_NOINTEGRALHEIGHT | WS_TABSTOP
+    RTEXT           "Char",IDC_STATIC,0,57,15,10
+    COMBOBOX        IDC_BITS,15,55,30,60,CBS_DROPDOWNLIST | 
+                    CBS_NOINTEGRALHEIGHT | WS_TABSTOP
+    LTEXT           "Flow",IDC_STATIC,45,57,15,10
+    COMBOBOX        IDC_FLOW,60,55,35,55,CBS_DROPDOWNLIST | 
+                    CBS_NOINTEGRALHEIGHT | WS_TABSTOP
+    RTEXT           "Title",IDC_STATIC,0,74,15,10
+    EDITTEXT        IDC_NAME,15,73,80,12,ES_AUTOHSCROLL
+END
+
+IDD_MESSAGE DIALOG DISCARDABLE  0, 0, 170, 28
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 9, "Tahoma"
+BEGIN
+    LTEXT           "",IDC_MESSAGE,5,3,155,10
+    DEFPUSHBUTTON   "OK",IDOK,60,15,50,12
+    PUSHBUTTON      "Cancel",IDCANCEL,115,15,50,12
+END
+
+IDD_COMM DIALOG DISCARDABLE  0, 0, 63, 43
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 9, "Tahoma"
+BEGIN
+    CONTROL         "RTS",IDC_RTS,"Button",BS_3STATE | BS_NOTIFY | 
+                    WS_TABSTOP,5,0,25,10
+    CONTROL         "DTR",IDC_DTR,"Button",BS_3STATE | BS_NOTIFY | 
+                    WS_TABSTOP,35,0,25,10
+    RADIOBUTTON     "DSR",IDC_DSR,35,10,25,10
+    RADIOBUTTON     "CTS",IDC_CTS,5,10,25,10
+    RADIOBUTTON     "RING",IDC_RING,5,20,30,10
+    RADIOBUTTON     "CD",IDC_CD,35,20,25,10
+    LTEXT           "Break",IDC_STATIC,15,31,20,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 92
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_COLOR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 92
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_MISC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+
+    IDD_HOST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+
+    IDD_MESSAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+
+    IDD_COMM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 56
+        BOTTOMMARGIN, 36
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN                ICON    DISCARDABLE     "main.ico"
+IDI_MENU                ICON    DISCARDABLE     "menu.ico"
+IDI_ARROW               ICON    DISCARDABLE     "arrow.ico"
+IDI_GAMMALH             ICON    DISCARDABLE     "gammalh.ico"
+IDI_GAMMAM              ICON    DISCARDABLE     "gammam.ico"
+IDI_CONFIG              ICON    DISCARDABLE     "config.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "Reset",                       IDM_RESET
+        MENUITEM "Close",                       IDM_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Paste",                      IDM_COPYPASTE
+        MENUITEM "Scroll&Bar",                  IDM_SCROLLBAR
+        MENUITEM "&Log...",                     IDM_LOG
+        MENUITEM "&Setup...",                   IDM_CONFIG
+        MENUITEM SEPARATOR
+        MENUITEM "&New...",                     IDM_NEW
+        MENUITEM "Quit",                        IDM_QUIT
+    END
+END
+
+IDR_COLOR_S MENU DISCARDABLE 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "White Background",            IDM_COLOR_W
+        MENUITEM "Black Background",            IDM_COLOR_B
+    END
+END
+
+IDR_CONFIG MENU DISCARDABLE 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "&Load Config...",             IDM_LOAD
+        MENUITEM "&Save Config...",             IDM_SAVE
+        MENUITEM "&Reset Config",               IDM_RESET
+        MENUITEM "Associate .24",               IDM_ASSOC
+    END
+END
+
+#endif    // “ú–{Œê resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

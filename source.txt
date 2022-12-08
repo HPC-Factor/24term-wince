@@ -1,0 +1,75 @@
+24term - 80x24 vt100 terminal emulator for WindowsCE
+         Copyright (c) 2000-2002 Zoroyoshi, SOFTCLUB, Japan
+         http://www.softclub.jp/~zoro/ce/
+
+2002-4-12 updated
+
+■ソースファイルとコンパイル方法
+24term.dsp	-- VC5.0+ToolKitでのプロジェクトファイル
+24term.vcp	-- eMbeddedVCでのプロジェクトファイル
+24term.rc resource.h newres.h *.ico -- リソースファイル
+main.cpp, h     -- 基本部分
+config.cpp, h   -- 設定ダイアログ関連
+screen.cpp, h   -- 文字受信して画面バッファ更新
+draw.cpp, h     -- 画面バッファを描画(基本部分)
+draw2.cpp, h    -- 2bpp用描画ルーチン
+draw8.cpp, h    -- 8bpp用描画ルーチン
+pic8.cpp, h     -- 8bpp用背景絵がある時用ルーチン
+draw16.cpp, h   -- 16bpp用描画ルーチン
+pic16.cpp, h    -- 16bpp用背景絵がある時用ルーチン
+bold.cpp        -- boldfaceフォントデータ(ANKS)
+
+SH及びMIPSバイナリは、VisualC++5.0J & CE Toolkit for VC5.0Jの、
+libとincludeをHPC2.0SDK英語版のものに置き換えたものでコンパイルし、
+CEOS2.0以降の英語版・日本語版で動作します。
+(2001-4-12よりシングルスレッドライブラリとリンクしています。)
+ARM及びSH4バイナリはeMbeddedVC++3.0JにHPC3.0SDK英語版をインストール
+したものでコンパイルし、CEOS2.11以降の英語版・日本語版で動作します。
+
+■ちょっとした説明
+・ソースコードが構造的にも論理的にも文学的にも汚いですが、
+  私のくせです。気にしないでください。
+・接続毎にScreenスレッドが作成され張り付きます。
+・256色モードでのパレット使いは、以下のようになっています。
+  が、CE2.11ではシステムカラー以外もそこそこ、
+  CE3.0ではどの色でもシステムに使われているので、
+  画面の他の部分の色が大きく変わったりします。
+  0x00-0x09 システムカラー
+  0x0a-0x11 文字色0～7
+  0x12-0x19 文字色8～15 (現在未使用)
+  0x1a      アンダーライン色
+  0x1b      背景色
+  0x1c-0x2b タイトルタブ表示用 (背景,文字)*8つ分
+  0x2c-0x2d 未使用
+  0x2e      背景絵のまっ黒部分
+  0x2f      背景絵のまっ白部分
+  0x30-0xaf 背景絵カラーパレット 128色分
+  0xb0-0xf0 ミニウィンドウでの使用 65色分(現在未使用)
+  0xf1-0xff システムカラー
+
+-------------------------------------------------------------------------
+24term - 80x24 vt100 terminal emulator for WindowsCE
+Copyright (c) 2000-2002 Zoroyoshi, SOFTCLUB, Japan
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. The name of the author may not be used to endorse or promote products
+   derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
